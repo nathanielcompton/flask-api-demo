@@ -1,6 +1,6 @@
 # Python Web API Coding Demonstration
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Black Formatter](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) ![Codecov](https://img.shields.io/codecov/c/github/nathanielcompton/python-api-demo)
-[![Github Actions](https://github.com/nathanielcompton/python-api-demo/workflows/Python%20API%20Demo%20App/badge.svg)](https://github.com/nathanielcompton/python-api-demo)
+[![Github Actions](https://github.com/nathanielcompton/python-api-demo/workflows/Python%20API%20Demonstration%20App/badge.svg)](https://github.com/nathanielcompton/python-api-demo)
 ![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fwww.github.com%2Fnathanielcompton%2Fpython-api-demo)
 
 This project is meant to demonstrate my ability to create a web-based API server using pre-defined
