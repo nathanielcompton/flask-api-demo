@@ -1,4 +1,5 @@
 # Python Web API Coding Demonstration
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Black Formatter](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 This project is meant to demonstrate my ability to create a web-based API server using pre-defined
 [functional requirements][reqs_doc].
 The initial project scope took a weekend to create, and revisions will remain ongoing
