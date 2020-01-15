@@ -16,6 +16,7 @@ class Vehicle:
     """
     Keeping track of an automobile-type of item delivery vehicle.
     """
+
     name: str
     dimensions: List[Tuple]  # Each Tuple represents a (L,W,H) volume
     max_single_wt: float

@@ -69,7 +69,7 @@ def find_best_fit(items_list: List[Dict]) -> str:
         )
     if longest_side > TRUCK.longest_side:
         raise ValueError(
-            f'Item with longest side of {longest_side} exceeds largest Vehicle max'
+            f"Item with longest side of {longest_side} exceeds largest Vehicle max"
         )
     if total_wt > TRUCK.max_total_wt or total_vl > TRUCK.max_total_vl:
         raise ValueError(f"Items list total weight/vol exceeds largest Vehicle max")
