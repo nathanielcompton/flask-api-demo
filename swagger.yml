@@ -1,0 +1,109 @@
+openapi: 3.0.1
+#####
+# API Specification
+#####
+info:
+  title: Shipment Sizing Demo
+  description: This is a proof of concept API server designed to find the most appropriate
+    vehicle to fit and transport a given array of objects. Each object has three-dimensional
+    measurements (in inches) and a weight (in lbs.)
+  contact:
+    email: nathanielcompton@gmail.com
+  license:
+    name: GNU v3.0
+    url: https://www.gnu.org/licenses/gpl-3.0.en.html
+  version: 0.1.0
+
+#####
+# Parameters
+#####
+servers:
+- url: http://0.0.0.0:5000
+  description: API server URL via Docker execution (i.e. `docker run ...`)
+- url: http://localhost:5000
+  description: API server URL via local environment execution (i.e. `flask run ...`)
+tags:
+- name: sanity
+  description: Application loading verification
+- name: sizing
+  description: Vehicle sizing demo
+paths:
+  /sanity:
+    get:
+      tags:
+      - sanity
+      summary: Call the sanity check to verify the app is running
+      responses:
+        200:
+          description: Successful operation
+          content:
+            text/html:
+              schema:
+                type: string
+                example: This is a sanity check!
+        500:
+          description: Server is not running
+  /vehicle_size:
+    post:
+      tags:
+      - sizing
+      summary: Find the correct vehicle for a list of shippable items
+      requestBody:
+        description: Array of items requiring an appropriately-sized vehicle
+        required: true
+        content:
+          application/json:
+            schema:
+              # [{...}, {...}, etc.]
+              type: array
+              items:
+                type: object
+                properties:
+                  length:
+                    type: number
+                    format: float
+                    description: Length of the given item, in inches
+                  width:
+                    type: number
+                    format: float
+                    description: Width of the given item, in inches
+                  height:
+                    type: number
+                    format: float
+                    description: Height of the given item, in inches
+                  weight:
+                    type: number
+                    format: float
+                    description: Weight of the given item, in lbs.
+                  quantity:
+                    type: integer
+                    minimum: 1
+                    description: "Quantity of the given item. Quantity > 1 represents
+                    multiple copies of the same item."
+                required:
+                  - length
+                  - width
+                  - height
+                  - weight
+                  - quantity
+              example:
+                  - length: 5.9
+                    width: 1.8
+                    height: 3.0
+                    weight: 12.2
+                    quanitity: 1
+                  - length: 3.9
+                    width: 4.8
+                    height: 3.0
+                    weight: 10.2
+                    quanitity: 2
+      responses:
+        200:
+          description: Successful operation
+          content:
+            text/html:
+              schema:
+                type: string
+                example: Truck
+        400:
+          description: Client provided malformed or partial data

@@ -1,0 +1,19 @@
+variables:
+  REQUIREMENTS_DEV_FILE: "requirements_dev.txt"
+  SRC_DIR: "src/"
+
+default:
+  image: python:3.8.0
+
+stages:
+  - test
+
+test:
+  stage: test
+  before_script:
+    - pip install -r $REQUIREMENTS_DEV_FILE
+    - black --check $SRC_DIR
+  script:
+    - pytest
+  except:
+    - master
