@@ -1,9 +1,3 @@
-# In addition to a traditional .dockerignore, this Dockerfile uses several strategies for saving further space:
-# 1. Use a version of python-alpine as the base image to eliminate unused libs
-# 2. Condense as many steps as (relatively) possible to reduce the number of Docker layers
-# 3. Separate development/test dependencies from production builds with the `Poetry` Python management tool
-# 4. Where possible, cache files between Docker layers (helps reduce unneeded file duplication)
-
 FROM python:3.8-slim-buster
 
 LABEL Author="Nathaniel Compton"
