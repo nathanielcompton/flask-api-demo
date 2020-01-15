@@ -1,4 +1,4 @@
-name: Python API Demonstration App
+name: Python API Demo App
 on: [push]
 jobs:
   build:

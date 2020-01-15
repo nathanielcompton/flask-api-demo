@@ -1,5 +1,8 @@
 # Python Web API Coding Demonstration
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Black Formatter](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Black Formatter](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) ![Codecov](https://img.shields.io/codecov/c/github/nathanielcompton/python-api-demo)
+[![Github Actions](https://github.com/nathanielcompton/python-api-demo/workflows/Python%20API%20Demo%20App/badge.svg)](https://github.com/nathanielcompton/python-api-demo)
+![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fwww.github.com%2Fnathanielcompton%2Fpython-api-demo)
+
 This project is meant to demonstrate my ability to create a web-based API server using pre-defined
 [functional requirements][reqs_doc].
 The initial project scope took a weekend to create, and revisions will remain ongoing
@@ -93,6 +96,15 @@ especially dependencies that vary based on development/production code environme
 Poetry uses the concept of a "lock" file, similar to a `package-lock.json` or
 `yarn.lock` file.
 
+### Testing & Coverage
+
+Run test locally with [Pytest]
+
+```sh
+(api-demo)$ pytest
+```
+Test coverage reports are available via [Codecov.io][codecov.io].
+
 ## Todos
 
   - Write additional API tests
@@ -118,6 +130,7 @@ License
    [Gitlab CI/CD]: <https://docs.gitlab.com/ee/ci/README.html>
    [Docker]: <https://www.docker.com/>
    [PEP8]: <https://www.python.org/dev/peps/pep-0008/>
+   [codecov.io]: <https://codecov.io/github/nathanielcompton/python-api-demo>
 
    [swagger]: ./swagger.yml
    [Github Actions]: <https://github.com/nathanielcompton/python-api-demo/actions>
