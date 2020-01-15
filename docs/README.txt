@@ -98,7 +98,7 @@ Poetry uses the concept of a "lock" file, similar to a `package-lock.json` or
 
 ### Testing & Coverage
 
-Run test locally with [Pytest]
+Run the test suite locally with [Pytest].
 
 ```sh
 (api-demo)$ pytest
