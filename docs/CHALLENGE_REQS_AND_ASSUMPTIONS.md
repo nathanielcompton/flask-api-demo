@@ -39,13 +39,14 @@ Truck due to the Van's max height constraint.
 For clarity, let's make a few assumptions:
 
 1. Both the shipment items objects and the shipping vehicles objects have three-dimensional
-volumes measured as [parallellpipeds]. Since this is a real world use case, we can safely
-assume these are all standard rectangulars prisms.
+volumes measured as [parallelpipeds]. Since this is a real world use case, we can safely
+assume these are all standard rectangular prisms.
 2. This challenge seems to be a modified version of the [Bin Packing Problem]. We'll
 need to account for four dimensions: LxWxH volume, and weight.
 3. Because this problem is [combinatorial] and [NP-hard], it will be best to choose a
 heuristic algorithm. My current plan is to implement a first-fit decreasing algorithm.
 
+[//]: # (These are reference links are hidden during Markdown file build.)
 
 [parallelpipeds]: https://en.wikipedia.org/wiki/Parallelepiped
 [Bin Packing Problem]: https://en.wikipedia.org/wiki/Bin_packing_problem
