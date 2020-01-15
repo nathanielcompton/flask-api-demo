@@ -77,12 +77,12 @@ this project is documented in a [separate swagger yml file][swagger].
 
 ### Version Control & CI/CD
 
-A [Gitlab CI/CD yml][cicd_yml] file exists in this repo for basic CI/CD demonstration
-purposes. Currently, the Gitlab CI/CD job will:
+This repo leverages [Github Actions][cicd_yml] for CI/CD demonstration purposes.
+Currently, the Github Actions CI/CD workflow will:
 
-* Install required libraries into a Python image
+* Install required libraries onto a Python image
 * Perform an initial code formatting check with Black
-* If formatting check passes, run test suite with Pytest
+* If formatting checks pass, run test suite with Pytest
 
 ### Package Management
 
@@ -119,7 +119,7 @@ License
    [PEP8]: <https://www.python.org/dev/peps/pep-0008/>
 
    [swagger]: ./swagger.yml
-   [cicd_yml]: ./gitlab-ci.yml
+   [cicd_yml]: <https://github.com/nathanielcompton/python-api-demo/actions>
    [reqs_doc]: ./docs/CHALLENGE_REQS_AND_ASSUMPTIONS.md
    [repoDF]: ./Dockerfile
    [LICENSE]: ./LICENSE
