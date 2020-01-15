@@ -14,7 +14,7 @@ This API service implements a few key libraries for demonstration of various rel
 * [Pytest] - Small, scalable testing for Python
 * [Poetry] - Python packaging made easy
 * [OAS v3.0] - OpenAPI Specification, an industry standard for describing modern APIs
-* [Gitlab CI/CD] - Version control and test-build-deploy pipeline automation
+* [Github Actions] - Version control and test-build-deploy pipeline automation
 * [Docker] - Containerization for faster, consistent and more reliable development
 
 ## Installation
@@ -77,7 +77,7 @@ this project is documented in a [separate swagger yml file][swagger].
 
 ### Version Control & CI/CD
 
-This repo leverages [Github Actions][cicd_yml] for CI/CD demonstration purposes.
+This repo leverages [Github Actions] for CI/CD demonstration purposes.
 Currently, the Github Actions CI/CD workflow will:
 
 * Install required libraries onto a Python image
@@ -119,7 +119,7 @@ License
    [PEP8]: <https://www.python.org/dev/peps/pep-0008/>
 
    [swagger]: ./swagger.yml
-   [cicd_yml]: <https://github.com/nathanielcompton/python-api-demo/actions>
+   [Github Actions]: <https://github.com/nathanielcompton/python-api-demo/actions>
    [reqs_doc]: ./docs/CHALLENGE_REQS_AND_ASSUMPTIONS.md
    [repoDF]: ./Dockerfile
    [LICENSE]: ./LICENSE
