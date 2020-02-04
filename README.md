@@ -17,7 +17,7 @@ This API service implements a few key libraries for demonstration of various rel
 * [Black] - An uncompromising Python code formatter
 * [Pytest] - Small, scalable testing for Python
 * [Poetry] - Python packaging made easy
-* [OAS v3.0] - OpenAPI Specification, an industry standard for describing modern APIs
+* [OAS v3.0] - OpenAPI Specification (Swagger), an industry standard for describing modern APIs
 * [Github Actions] - Version control and test-build-deploy pipeline automation
 * [Docker] - Containerization for faster, consistent and more reliable development
 
@@ -109,6 +109,7 @@ Test coverage reports are available via [Codecov.io][codecov.io].
 
   - Write additional API tests
   - Improve Packing Algorithm
+  - Implement distributed systems deployment (AWS/GCP/Azure)
 
 License
 ----
