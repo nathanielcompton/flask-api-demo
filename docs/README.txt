@@ -12,43 +12,42 @@ as skills develop and time/resources allow.
 
 This API service implements a few key libraries for demonstration of various related skill sets:
 
-* [Python 3.8]
+* [Python 3.13]
 * [Flask] - A lightweight WSGI web application framework for Python
 * [Black] - An uncompromising Python code formatter
 * [Pytest] - Small, scalable testing for Python
-* [Poetry] - Python packaging made easy
-* [OAS v3.0] - OpenAPI Specification, an industry standard for describing modern APIs
+* [OAS v3.0] - OpenAPI Specification (Swagger), an industry standard for describing modern APIs
 * [Github Actions] - Version control and test-build-deploy pipeline automation
 * [Docker] - Containerization for faster, consistent and more reliable development
 
 ## Installation
-This demo app requires [Python 3.8] to run.
+This demo app requires [Python 3.13] to run.
 You can run this application in one of two ways: building code from source, or building with a [Docker] container.
 
-Currently, the [Dockerfile][repoDF] is designed to build a production-ready Docker image of minimal image file size.
-Because of this, all test- and documentation-related code will be ignored when building from the Dockerfile.
+The [Dockerfile][repoDF] is designed to build a production-ready image without testing or documentation files, in order to optimize image size.
 
 If you want to run a live app demonstration without a need to edit code, build with Docker.
-If you wish to develop code and edit tests/documentation, you will need to build from source.
+If you want to develop code and edit tests/documentation, you will need to build from source.
 
 ### Build From Source
 
-If needed, create and activate a new Python virtual environment ([Pyenv] example provided here)
+If needed, create and activate a new Python virtual environment.
+Note: `virtualenv` example is provided but use your preferred manager.
+
 ```sh
-# Create a new virtualenv, if needed
-$ pyenv install 3.8.0
-$ pyenv virtualenv 3.8.0 api-demo
-$ pyenv activate api-demo
+$ python3.13 -m venv venv
+$ source venv/bin/activate
+(venv) $ pip install -r requirements_dev.txt
+# pip install requirements_prod.txt instead if you don't want testing requirements included
 ```
 
-Then install and configure normally.
+After installation, configure as needed and run the app:
 ```sh
-(api-demo)$ pip install --upgrade pip && pip install -r requirements_dev.txt
-(api-demo)$ export FLASK_APP=src/app.py && export DEBUG=True && export FLASK_ENV=development
-(api-demo)$ flask run
+(venv)$ export FLASK_APP=src/app.py && export DEBUG=True && export FLASK_ENV=development
+(venv)$ flask run
 ```
 
-To verify a successful build from source, navigate to: http://localhost:5000/sanity
+To verify a successful build from source, navigate to: http://127.0.0.1:5000/sanity
 
 ### Build With Docker
 Building with Docker is, of course, simpler.
@@ -69,9 +68,10 @@ level explanation of algorithm and data structure choices are available in this
 
 [Black] is a Python code style tool based on the [PEP8] code style standard and best
 linting practices. The rationale of this tool is to take out as much of the PEP8
-"guess work" as possible, and also to normalize Python code styling for teams with
-numerous engineers. Black allows engineers to spend less time nitpicking about
-coding style opinions, and spend more time writing new features, tests, etc.
+guess work as possible, and also to normalize Python code styling for teams with
+numerous engineers each having unique development preferences.
+Black allows engineers to spend less time nitpicking about coding style opinions,
+and spend more time writing new features, tests, etc.
 
 ### OpenAPI Specification
 
@@ -88,20 +88,12 @@ Currently, the Github Actions CI/CD workflow will:
 * Perform an initial code formatting check with Black
 * If formatting checks pass, run test suite with Pytest
 
-### Package Management
-
-Although it isn't needed to run a live demo of this application, I use the [Poetry]
-tool for Python package management. It is a robust tool to manage project dependencies,
-especially dependencies that vary based on development/production code environments.
-Poetry uses the concept of a "lock" file, similar to a `package-lock.json` or
-`yarn.lock` file.
-
 ### Testing & Coverage
 
 Run the test suite locally with [Pytest].
 
 ```sh
-(api-demo)$ pytest
+(venv)$ pytest
 ```
 Test coverage reports are available via [Codecov.io][codecov.io].
 
@@ -109,6 +101,7 @@ Test coverage reports are available via [Codecov.io][codecov.io].
 
   - Write additional API tests
   - Improve Packing Algorithm
+  - Implement distributed systems deployment (AWS/GCP/Azure)
 
 License
 ----
@@ -116,16 +109,13 @@ License
 [GNU v3.0](LICENSE)
 
 
-[//]: # (These are reference links are hidden during Markdown file build.)
+[//]: # (These reference links are hidden during Markdown file build.)
 
 
-   [Python 3.8]: <https://www.python.org/downloads/release/python-380/>
+   [Python 3.13]: <https://www.python.org/downloads/release/python-3130/>
    [Flask]: <https://www.palletsprojects.com/p/flask/>
    [Black]: <https://black.readthedocs.io/en/stable/>
    [Pytest]: <https://docs.pytest.org/en/latest/>
-   [Pyenv]: <https://github.com/pyenv/pyenv>
-   [Pyenv-virtualenv]: <https://github.com/pyenv/pyenv>
-   [Poetry]: <https://python-poetry.org/>
    [OAS v3.0]: <https://www.openapis.org/>
    [Gitlab CI/CD]: <https://docs.gitlab.com/ee/ci/README.html>
    [Docker]: <https://www.docker.com/>

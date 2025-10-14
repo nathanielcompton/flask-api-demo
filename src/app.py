@@ -9,6 +9,10 @@ dictConfig(FLASK_LOGGING_CONFIG)
 app = Flask(__name__)
 
 
+@app.route("/", methods=["GET"])
+def index():
+    return f"Installation successful! For API usage, check the swagger documentation at /docs", 200
+
 @app.route("/sanity", methods=["GET"])
 def sanity_check():
     app.logger.info(f"Sanity check logger test!")

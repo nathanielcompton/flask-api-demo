@@ -1,8 +1,9 @@
-FROM python:3.8-slim-buster
+FROM python:3.13-slim
 
 LABEL Author="Nathaniel Compton"
+LABEL Description="A vehicle sizing API demo built with Flask"
 LABEL E-mail="nathanielcompton@gmail.com"
-LABEL version="0.1.0"
+LABEL version="1.0"
 
 # Environment variables
 ENV FLASK_APP "src/app.py"
