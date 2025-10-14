@@ -11,7 +11,11 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET"])
 def index():
-    return f"Installation successful! For API usage, check the swagger documentation at /docs", 200
+    return (
+        f"Installation successful! For API usage, check the swagger documentation at /docs",
+        200,
+    )
+
 
 @app.route("/sanity", methods=["GET"])
 def sanity_check():

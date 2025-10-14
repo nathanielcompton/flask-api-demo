@@ -7,6 +7,7 @@ monitor available Vehicle inventory, min/max size constraints, etc.
 
 Given more time, switch to a dedicated database and  Object-Relational Mapper.
 """
+
 from dataclasses import dataclass, field
 from typing import List, Tuple
 

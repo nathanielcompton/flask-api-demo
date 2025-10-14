@@ -1,7 +1,9 @@
 FLASK_LOGGING_CONFIG = {
     "version": 1,
     "formatters": {
-        "default": {"format": "[%(asctime)s] %(levelname)s in %(module)s: %(message)s",}
+        "default": {
+            "format": "[%(asctime)s] %(levelname)s in %(module)s: %(message)s",
+        }
     },
     "handlers": {
         "wsgi": {

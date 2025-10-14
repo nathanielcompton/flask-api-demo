@@ -8,7 +8,12 @@ from .settings import VEH_CPT, VEH_SDN, VEH_VAN, VEH_TRK, NO_FIT_FOUND
 logger = logging.getLogger()
 
 COMPACT = Vehicle(
-    name=VEH_CPT, dimensions=[(24, 24, 36),], max_single_wt=50, max_total_wt=150
+    name=VEH_CPT,
+    dimensions=[
+        (24, 24, 36),
+    ],
+    max_single_wt=50,
+    max_total_wt=150,
 )
 
 SEDAN = Vehicle(
@@ -19,11 +24,21 @@ SEDAN = Vehicle(
 )
 
 VAN = Vehicle(
-    name=VEH_VAN, dimensions=[(120, 60, 60),], max_single_wt=70, max_total_wt=500
+    name=VEH_VAN,
+    dimensions=[
+        (120, 60, 60),
+    ],
+    max_single_wt=70,
+    max_total_wt=500,
 )
 
 TRUCK = Vehicle(
-    name=VEH_TRK, dimensions=[(150, 96, 84),], max_single_wt=500, max_total_wt=2000
+    name=VEH_TRK,
+    dimensions=[
+        (150, 96, 84),
+    ],
+    max_single_wt=500,
+    max_total_wt=2000,
 )
 
 
