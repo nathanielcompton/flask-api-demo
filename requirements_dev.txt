@@ -1,5 +1,5 @@
 # Dev and Prod requirements are separate files for Docker ease-of-use and install size minimization.
 -r requirements_prod.txt
-black==25.9.0
+black==26.3.1
 pytest==8.4.2
 pytest-cov==7.0.0
